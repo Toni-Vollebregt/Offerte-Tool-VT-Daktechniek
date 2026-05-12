@@ -27,10 +27,11 @@ JSON structuur:
 }
 
 Regels voor het veld "description":
-- Schrijf een uitgebreide Nederlandse omschrijving van alle werkzaamheden.
-- Beschrijf concreet wat er gedaan wordt: welke materialen, welke handelingen, welke onderdelen van het dak.
+- Schrijf een uitgebreide Nederlandse omschrijving van de uit te voeren werkzaamheden.
+- Beschrijf alleen WAT er gedaan moet worden: welke onderdelen, welke materialen, welke handelingen.
+- Geen afsluitende zinnen over oplevering, netheid of klanttevredenheid.
 - Meerdere zinnen zijn prima. Dit wordt zichtbaar op de offerte als omschrijving van de opdracht.
-- Voorbeeld: "Het vervangen van de bestaande bitumen dakbedekking op het platte dak, inclusief het verwijderen van de oude dakbedekking en isolatie, het aanbrengen van nieuwe PIR-isolatieplaten 80mm, het leggen van een nieuwe 2-laagse bitumen dakbedekking, het reinigen en controleren van de dakgoten en afvoeren, en het netjes achterlaten van het werk."
+- Voorbeeld: "Het vervangen van de bestaande bitumen dakbedekking op het platte dak. Inclusief het verwijderen van de oude dakbedekking en isolatie, het aanbrengen van nieuwe PIR-isolatieplaten 80mm en het leggen van een nieuwe 2-laagse bitumen dakbedekking. Reinigen en controleren van de dakgoten en afvoeren."
 
 Regels voor "lines":
 - Geef ALTIJD precies één regel terug: { "description": "Aangenomen werk", "quantity": 1, "unit": "project", "unit_price": 0, "vat_rate": 21 }
