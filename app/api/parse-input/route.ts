@@ -74,6 +74,12 @@ Houd alle tekst in het Nederlands.`
 
     return Response.json(parsed)
   } catch (err) {
+    if (err instanceof Anthropic.APIError && err.status === 529) {
+      return Response.json(
+        { error: 'Even te druk, probeer het over een minuutje opnieuw.' },
+        { status: 503 }
+      )
+    }
     const msg = err instanceof Error ? err.message : String(err)
     console.error('parse-input error:', msg)
     return Response.json({ error: `Verwerking mislukt: ${msg}` }, { status: 500 })

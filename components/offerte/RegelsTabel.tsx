@@ -126,10 +126,10 @@ export default function RegelsTabel({ lines, onChange }: Props) {
         </table>
       </div>
 
-      <div className="border-t border-gray-200 px-4 py-3 flex justify-between items-center">
+      <div className="border-t border-gray-200 px-4 py-3 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 sm:gap-0">
         <button
           onClick={addLine}
-          className="text-sm text-[#cc0000] hover:text-[#aa0000] font-medium flex items-center gap-1"
+          className="text-sm text-[#cc0000] hover:text-[#aa0000] font-medium flex items-center gap-1 self-start"
         >
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M12 5v14M5 12h14" />
@@ -137,18 +137,18 @@ export default function RegelsTabel({ lines, onChange }: Props) {
           Regel toevoegen
         </button>
 
-        <div className="text-right space-y-1">
-          <div className="flex gap-8 justify-end text-sm text-gray-600">
+        <div className="space-y-1 sm:text-right">
+          <div className="flex justify-between sm:justify-end sm:gap-8 text-sm text-gray-600">
             <span>Subtotaal excl. BTW</span>
-            <span className="w-24 text-right">{formatEuro(subtotal)}</span>
+            <span className="sm:w-24 text-right">{formatEuro(subtotal)}</span>
           </div>
-          <div className="flex gap-8 justify-end text-sm text-gray-600">
+          <div className="flex justify-between sm:justify-end sm:gap-8 text-sm text-gray-600">
             <span>BTW</span>
-            <span className="w-24 text-right">{formatEuro(vat_total)}</span>
+            <span className="sm:w-24 text-right">{formatEuro(vat_total)}</span>
           </div>
-          <div className="flex gap-8 justify-end text-base font-bold text-[#1a1a1a] pt-1 border-t border-gray-200 mt-1">
+          <div className="flex justify-between sm:justify-end sm:gap-8 text-base font-bold text-[#1a1a1a] pt-1 border-t border-gray-200 mt-1">
             <span>Totaal incl. BTW</span>
-            <span className="w-24 text-right">{formatEuro(total)}</span>
+            <span className="sm:w-24 text-right">{formatEuro(total)}</span>
           </div>
         </div>
       </div>

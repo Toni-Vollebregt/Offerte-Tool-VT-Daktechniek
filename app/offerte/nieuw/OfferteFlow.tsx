@@ -105,18 +105,18 @@ export default function OfferteFlow({ settings }: Props) {
   return (
     <div className="space-y-5">
       {/* Stap indicator */}
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-2 sm:gap-3">
         {([1, 2, 3] as Stap[]).map((s) => (
-          <div key={s} className="flex items-center gap-2">
+          <div key={s} className="flex items-center gap-1.5 sm:gap-2">
             <div className={`w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold transition-colors ${
               stap === s ? 'bg-[#cc0000] text-white' : stap > s ? 'bg-[#2d2d2d] text-white' : 'bg-gray-200 text-gray-500'
             }`}>
               {stap > s ? '✓' : s}
             </div>
-            <span className={`text-sm ${stap === s ? 'font-semibold text-[#2d2d2d]' : 'text-gray-400'}`}>
+            <span className={`hidden sm:inline text-sm ${stap === s ? 'font-semibold text-[#2d2d2d]' : 'text-gray-400'}`}>
               {s === 1 ? 'Invoer' : s === 2 ? 'Controleren' : 'PDF'}
             </span>
-            {s < 3 && <div className={`h-px w-6 ${stap > s ? 'bg-[#2d2d2d]' : 'bg-gray-200'}`} />}
+            {s < 3 && <div className={`h-px w-4 sm:w-6 ${stap > s ? 'bg-[#2d2d2d]' : 'bg-gray-200'}`} />}
           </div>
         ))}
       </div>

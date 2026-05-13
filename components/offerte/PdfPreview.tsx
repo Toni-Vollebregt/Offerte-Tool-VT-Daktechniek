@@ -42,7 +42,7 @@ export default function PdfPreview({ estimateNumber, customer, description, line
           )}
         </PDFDownloadLink>
       </div>
-      <div className="rounded-xl border border-gray-200 overflow-hidden shadow-sm" style={{ height: 750 }}>
+      <div className="rounded-xl border border-gray-200 overflow-hidden shadow-sm h-[480px] sm:h-[750px]">
         <PDFViewer width="100%" height="100%" showToolbar={false}>
           <OfferteDocument {...docProps} />
         </PDFViewer>

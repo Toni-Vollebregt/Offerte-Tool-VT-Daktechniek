@@ -15,12 +15,9 @@ export default function InputStap({ onParsed }: Props) {
   const [error, setError] = useState('')
   const fileRef = useRef<HTMLInputElement>(null)
 
-  const template = `Klantgegevens:
-Omschrijving:
-Soort klus:
-Werkzaamheden:
-Materialen:
-Arbeid:`
+  const template = `Voer het volgende in:
+- Klantgegevens
+- Werkzaamheden`
 
   async function handleAnalyse() {
     setError('')
