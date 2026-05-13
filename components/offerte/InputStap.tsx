@@ -134,7 +134,7 @@ export default function InputStap({ onParsed }: Props) {
       {error && <p className="text-sm text-red-600">{error}</p>}
 
       <Button onClick={handleAnalyse} loading={loading} className="w-full sm:w-auto">
-        Analyseer met AI
+        Verwerk informatie
       </Button>
     </div>
   )
